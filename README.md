@@ -4,5 +4,5 @@ code-red is intended to be a simple yet friendly set of Arch Linux configs for n
 All files in this repository will contain the following header syntax:
 
 NAME
-~/APPROPRIATE/PATH/TO/FILE
+Path: ~/APPROPRIATE/PATH/TO/FILE
 
