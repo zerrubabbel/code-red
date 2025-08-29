@@ -11,17 +11,19 @@ Code-Red assumes that you have already created install media, have verified the 
 
 Code-Red will guide you through the *archisntall* script, but familiarity with the CLI install as outlined in the official Install Guide is highly encouraged and recommended.
 
-**Initial Steps**
+### Initial Steps
+
 1. Boot from your Arch Linux Install Media
 2. Verify connection to internet - *ping google.com*
 3. If you need to establish a connection via wifi, use *iwctl*
 - https://wiki.archlinux.org/title/Iwd
 4. Update the pacman database - *pacman -Syy*
 5. Verify your disc and partition scheme - *lsblk*
+- Navigate this step carefully to avoid accidentally harming other hard drives and their contents
 6. Adjust if necessary - *fdisk /dev/TARGET-DISC*
 7. Proceed to *archinstall* when ready
 
-## *archinstall*
+### *archinstall*
 
 Here are the Code-Red recommended configurations, as proceeding down the *archinstall* menu
 
@@ -54,6 +56,8 @@ Proceed with installation
 When the install script finishes, it will ask you if you want to chroot into your new install. Select 'Yes'.
 
 ## chroot steps
+
+### Optimize pacman
 
 **Enable pacman Parallel Downloads**
 - edit pacman.conf: *nano /etc/pacman.conf*
@@ -125,3 +129,146 @@ File Managers
 
 #### Cinnamon
 Cinnamon is a relatively lightweight DE, and has a 'Windows 10' familiar feel by default, though is quite customizable.
+- *pacman -S cinnamon*
+
+#### COSMIC (alpha)
+Cosmic is an alpha stage DE in development, but still shows high capability and high promise. It's default feel is alike to Mac OS, but is both customizable
+and future facing. It features an integrated yet togglable tiling window manager.
+- *pacman -S cosmic*
+
+#### xfce
+xfce is a very lightweight DE, but still has high potential for customization with a little work. Choose xfce if you want a simple, grounded, "Windows XP" or earlier feel.
+- *pacman -S sfce4*
+
+#### Other options
+
+There are many other options for graphical environments. Though they fall outside the scope of Code-Red, many due to highly involved configuration, lesser gaming compatibility,
+or for some, lower development support.
+
+**Recommendations For Further Exploration**
+
+This is a set of options meant to give a preview of what is available in the greater Linux ecosystem
+
+Mate, Budgie, LXDE / LXQT, Openbox, AwesomeWM, Window Maker, Hyprland, BSPWM, i3, Qtile, Xmonad
+
+### Install Remaining Initial Software
+
+#### Protonup-QT
+
+Protonup-QT offers expensions to the gaming compatibility layer 'Proton', including Proton-GE, which often offers smoother gaming experiences than Proton alone.
+
+- *flatpak install flathub net.davidotek.pupgui2*
+
+#### yay
+*optional, but recommended*
+
+yay is an Arch User Repository (AUR - community maintained software library) Helper, and can give you easy access to a wider selection of software
+
+- *sudo pacman -Syu*
+- *sudo pacman -S --needed base-devel git*
+- *git clone https://aur.archlinux.org/yay.git*
+- *cd yay*
+- *makepkg -si*
+- *yay --version*
+- *cd*
+
+#### Miscellaneous 
+
+Browser (Brave recommended)
+- *flatpak install flathub com.brave.Browser*
+
+Steam
+- *pacman -S steam*
+
+Bluez (bluetooth utility)
+- *pacman -S bluez*
+- *systemctl enable bluetooth.service*
+
+ntfs-3g (Windows filesystem utility)
+- *pacman -S ntfs-3g*
+
+noto-fonts-cjk (expanded font support)
+- *pacman -S noto-fonts-cjk*
+
+vlc (media player)
+- *pacman -S vlc
+
+Obsidian (markdown notes manager)
+- *pacman -S obsidian)
+
+## Complete the Installation
+
+When your chroot setup, configurations, and installations are complete, exit the chroot environment
+- *exit*
+
+Then, reboot your computer
+- *reboot*
+- remove install media
+
+**Congratulations! At this point, you should have a functional Arch Linux installation!**
+- If necessary, stop at your BIOS and set your boot priorities.
+
+# First Boot
+
+Sometimes, not all software is quite oriented on first boot. It's recommended to run a system update, and proceed to 2nd boot
+
+Open kitty
+- *sudo pacman -Syu*
+- *reboot*
+
+## 2nd Boot
+
+At this point, you're much more free to navigate as you wish... Here are a few things to consider
+
+Verify that your firewall is working
+- *sudo ufw status*
+
+Open your web browser, configure, and populate your bookmarked websites
+
+Configure your Desktop Environment
+- Set a desktop wallpaper: (100+ options at https://imgur.com/a/desktop-wallpeppers-HnHG38H)
+- Explore your DEs settings menu to set custom icons, cursors, power settings, blue light protection, and more
+- Arrange your taskbar, dock, or the widgets they contain
+
+Download your games, and explore other gaming options
+- Use Protonup-QT to download the latest version of Proton-GE (find 'compatibility' in steam game settings to set preferred proton version)
+- 
+- Lutris (game and launcher compatibility and organization)
+- ProtonDB (website which reports the Linux compatibility state of games)
+
+**Download the config files found in this repository** (each file has a header with its name, and the path where that file should be stored)
+- .bashrc (contains useful terminal shortcuts, terminal safety features)
+- .help.md (as long as the provided .bashrc file is used, you can type 'arch-help' for useful tips when you get stuck)
+- kitty.conf (Makes your terminal look good)
+- fastfetch (provides a good looking fastfetch config, and a picture that can be used)
+
+Consider backup and redundancy strategies
+- Timeshift is a utility that can automatically create and manage system backups
+- Consider installing a 2nd kernel: linux-lts kernel is recommended
+- Consider storing important files on a separate hard drive
+
+Visit the 'General Recommendations' Arch Wiki Page
+- https://wiki.archlinux.org/title/General_recommendations
+
+## Ongoing Maintenance
+
+*sudo pacman -Syu* (or *arch-update* with the provided .bashrc file)
+- Arch should be updated regularly. Once per week is optimal.
+- Wednesday and Thursday are generally the safest days for avoiding bad package updates, as determined by most development cycles.
+- *journalctl, dmesg, --verbose* commands, log files, and launching applications from the terminal are useful ways to get troubleshooting insight.
+- To launch an application from the termainal, simply type its name as a command, and execute.
+
+# Further Resources
+
+- The Arch Wiki: https://wiki.archlinux.org/title/Main_page
+- The official Arch Forums: https://bbs.archlinux.org/
+- The Arch Linux Subreddit: https://www.reddit.com/r/archlinux/
+
+It's helpful to spend time in Arch communities, or watching Arch channel hosts to acquaint yourself with what's possible, and what you may like.
+
+## The system is now completely yours!
+
+Take care of it, and it will take care of you! Please enjoy Arch Linux
+
+# Rationale for initial customizations
+
