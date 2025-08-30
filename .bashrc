@@ -36,7 +36,7 @@ alias "mirrors"="sudo reflector --verbose --sort rate -l 50 -c 'United States' -
 
 alias "cp"="cp -i"
 alias "mv"="mv -i"
-alias "rm"="rm -i"
+alias "rm"='echo "Are you sure you want to remove files? If so use /bin/rm"'
 alias "c"="clear"
 
 ## Navigation
