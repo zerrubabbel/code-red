@@ -9,23 +9,23 @@ Code-Red assumes that you have already created install media, have verified the 
 
 ## Getting Started
 
-Code-Red will guide you through the 'archinstall' script, but familiarity with the CLI install as outlined in the official Install Guide is highly encouraged and recommended.
+Code-Red will guide you through the *archisntall* script, but familiarity with the CLI install as outlined in the official Install Guide is highly encouraged and recommended.
 
 ### Initial Steps
 
 1. Boot from your Arch Linux Install Media
-2. Verify connection to internet - 'ping google.com'
-3. If you need to establish a connection via wifi, use 'iwctl'
+2. Verify connection to internet - *ping google.com*
+3. If you need to establish a connection via wifi, use *iwctl*
 - https://wiki.archlinux.org/title/Iwd
-4. Update the pacman database - 'pacman -Syy'
-5. Verify your disc and partition scheme - 'lsblk'
+4. Update the pacman database - *pacman -Syy*
+5. Verify your disc and partition scheme - *lsblk*
 - Navigate this step carefully to avoid accidentally harming other hard drives and their contents
-6. Adjust if necessary - 'fdisk /dev/TARGET-DISC'
-7. Proceed to 'archinstall' when ready
+6. Adjust if necessary - *fdisk /dev/TARGET-DISC*
+7. Proceed to *archinstall* when ready
 
-### 'archinstall'
+### *archinstall*
 
-Here are the Code-Red recommended configurations, as proceeding down the 'archinstall' menu
+Here are the Code-Red recommended configurations, as proceeding down the *archinstall* menu
 
 - Archinstall language: user preference
 - Locales: user specified
@@ -42,7 +42,7 @@ Here are the Code-Red recommended configurations, as proceeding down the 'archin
 - Profile: Xorg
 - Graphics drivers: 'All open-source' unless using an Nvidia graphics card, in which case select 'Nvidia (proprietary)'
 - Audio: Pipewire
-- Kernels: default linux kernel
+- Kernels: defualt linux kernel
 - Network configuration: NetworkManager enabled
 - Additional packages: nano reflector
 - Optional repositories: enable Multilib
@@ -59,26 +59,26 @@ When the install script finishes, it will ask you if you want to chroot into you
 
 ### Optimize pacman
 
-''Enable pacman Parallel Downloads''
-- edit pacman.conf: 'nano /etc/pacman.conf'
-- find: '#ParallelDownloads = 5'
-- change it to: 'ParallelDownloads = X' where X is the number of threads available to your CPU (often 12, 16, 20, or 24)
+**Enable pacman Parallel Downloads**
+- edit pacman.conf: *nano /etc/pacman.conf*
+- find: *#ParallelDownloads = 5*
+- change it to: *ParallelDownloads = X* where X is the number of threads available to your CPU (often 12, 16, 20, or 24)
 - save and exit (CTL + X), save buffer (yes), write file? (ENTER)
 
-''Optimize pacman mirrors''
-- 'cp /etc/pacman.d/mirrorlist.bak /etc/pacman.d/mirrorlist'
+**Optimize pacman mirrors**
+- *cp /etc/pacman.d/mirrorlist.bak /etc/pacman.d/mirrorlist*
 (select one of the following commands, or edit syntax as needed)
-- USA: 'reflector --verbose --sort rate -l 50 -c 'United States' -p https --save /etc/pacman.d/mirrorlist'
-- Germany: 'reflector --verbose --sort rate -l 50 -c 'Germany' -p https --save /etc/pacman.d/mirrorlist'
-- Japan: 'reflector --verbose --sort rate -l 12 -c 'Japan' -p https --save /etc/pacman.d/mirrorlist'
-- Brazil: 'reflector --verbose --sort rate -l 10 -c 'Brazil' -p https --save /etc/pacman.d/mirrorlist'
+- USA: *reflector --verbose --sort rate -l 50 -c 'United States' -p https --save /etc/pacman.d/mirrorlist*
+- Germany: *reflector --verbose --sort rate -l 50 -c 'Germany' -p https --save /etc/pacman.d/mirrorlist*
+- Japan: *reflector --verbose --sort rate -l 12 -c 'Japan' -p https --save /etc/pacman.d/mirrorlist*
+- Brazil: *reflector --verbose --sort rate -l 10 -c 'Brazil' -p https --save /etc/pacman.d/mirrorlist*
 
-''Install and set up Code-Red Packages''
-- 'pacman -S ufw btop fastfetch kitty'
-- 'systemctl enable ufw.service'
+**Install and set up Code-Red Packages**
+- *pacman -S ufw btop fastfetch kitty*
+- *systemctl enable ufw.service*
 
 ### Install your Desktop Environment
-'select either KDE Plasma, Gnome, or both if desired'
+*select either KDE Plasma, Gnome, or both if desired*
 
 KDE Plasma and Gnome are primary choices for easy Arch Linux setups, because installing either one makes many necessary configurations on your behalf.
 You may choose other environments as stand alone options, but this will leave you with extra configurations to navigate on your own.
@@ -91,61 +91,61 @@ KDE Plasma is a feature rich, and highly versatile desktop environment that has 
 though it's highly capable of mimicing other familiar environments, or synthesizing a unique workflow.
 Plasma can be prone to quirks or bugs. In the case that these are experienced, It's advisable to have a backup DE on hand.
 
-- 'pacman -S plasma'
+- *pacman -S plasma*
 
 Optional Plasma Software
-- Dolphin: Plasma (qt) friendly file manager - 'pacman -S dolphin'
-- Spectacle: qt screenshot utility - 'pacman -S spectacle'
+- Dolphin: Plasma (qt) friendly file manager - *pacman -S dolphin*
+- Spectacle: qt screenshot utility - *pacman -S spectacle*
 
 #### Gnome
 
 Gnome is a highly cohesive desktop environment which is partially alike to Mac OS, and partially unique. It focuses on encouraging effective workflow.
 Gnome can be modified with 'extensions' to further customize workflow. Beware that extensions are prone to breakage following Gnome version updates.
 
-- 'pacman -S gnome'
+- *pacman -S gnome*
 
 Optional Gnome Software
-- Gnome Tweaks: expanded Gnome settings - 'pacman -S gnome-tweaks'
-- Extension Manager: manages Gnome extensions easily - 'flatpak install flathub com.mattjakeman.ExtensionManager'
+- Gnome Tweaks: expanded Gnome settings - *pacman -S gnome-tweaks*
+- Extension Manager: manages Gnome extensions easily - *flatpak install flathub com.mattjakeman.ExtensionManager*
 File Managers
 - Gnome comes with the 'nautilus' file manager.
-- Nemo is a Gnome friendly (gtk) file manager - 'pacman -S nemo'
-- the Dolphin file manager mentioned above will work, but will pull several qt packages, and break Gnome cohesion - 'pacman -S dolphin'
+- Nemo is a Gnome friendly (gtk) file manager - *pacman -S nemo*
+- the Dolphin file manager mentioned above will work, but will pull several qt packages, and break Gnome cohesion - *pacman -S dolphin*
 
 ### Enable your Display Manager (login screen)
 
-''If you installed KDE Plasma''
-- 'systemctl enable sddm.service'
+**If you installed KDE Plasma**
+- *systemctl enable sddm.service*
 
-''If you installed Gnome''
-- 'systemctl enable gdm.service'
+**If you installed Gnome**
+- *systemctl enable gdm.service*
 
-''If you installed both KDE Plasma and Gnome''
+**If you installed both KDE Plasma and Gnome**
 - Use one of the above commands to enable gdm or sddm, but not both.
 - Enable gdm if you want cohesion with Gnome.
 
 ### Install Backup Desktop Environments (optional)
-'optional, but recommended to select and install at least one'
+*optional, but recommended to select and install at least one*
 
 #### Cinnamon
 Cinnamon is a relatively lightweight DE, and has a 'Windows 10' familiar feel by default, though is quite customizable.
-- 'pacman -S cinnamon'
+- *pacman -S cinnamon*
 
 #### COSMIC (alpha)
 Cosmic is an alpha stage DE in development, but still shows high capability and high promise. It's default feel is alike to Mac OS, but is both customizable
 and future facing. It features an integrated yet togglable tiling window manager.
-- 'pacman -S cosmic'
+- *pacman -S cosmic*
 
 #### xfce
 xfce is a very lightweight DE, but still has high potential for customization with a little work. Choose xfce if you want a simple, grounded, "Windows XP" or earlier feel.
-- 'pacman -S xfce4'
+- *pacman -S xfce4*
 
 #### Other options
 
 There are many other options for graphical environments. Though they fall outside the scope of Code-Red, many due to highly involved configuration, lesser gaming compatibility,
 or for some, lower development support.
 
-''Recommendations For Further Exploration''
+**Recommendations For Further Exploration**
 
 This is a set of options meant to give a preview of what is available in the greater Linux ecosystem
 
@@ -157,55 +157,55 @@ Mate, Budgie, LXDE / LXQT, Openbox, AwesomeWM, Window Maker, Hyprland, BSPWM, i3
 
 Protonup-QT offers expensions to the gaming compatibility layer 'Proton', including Proton-GE, which often offers smoother gaming experiences than Proton alone.
 
-- 'flatpak install flathub net.davidotek.pupgui2'
+- *flatpak install flathub net.davidotek.pupgui2*
 
 #### yay
-'optional, but recommended'
+*optional, but recommended*
 
 yay is an Arch User Repository (AUR - community maintained software library) Helper, and can give you easy access to a wider selection of software
 
-- 'sudo pacman -Syu'
-- 'sudo pacman -S --needed base-devel git'
-- 'git clone https://aur.archlinux.org/yay.git'
-- 'cd yay'
-- 'makepkg -si'
-- 'yay --version'
-- 'cd'
+- *sudo pacman -Syu*
+- *sudo pacman -S --needed base-devel git*
+- *git clone https://aur.archlinux.org/yay.git*
+- *cd yay*
+- *makepkg -si*
+- *yay --version*
+- *cd*
 
 #### Miscellaneous 
 
 Browser (Brave recommended)
-- 'flatpak install flathub com.brave.Browser'
+- *flatpak install flathub com.brave.Browser*
 
 Steam
-- 'pacman -S steam'
+- *pacman -S steam*
 
 Bluez (bluetooth utility)
-- 'pacman -S bluez'
-- 'systemctl enable bluetooth.service'
+- *pacman -S bluez*
+- *systemctl enable bluetooth.service*
 
 ntfs-3g (Windows filesystem utility)
-- 'pacman -S ntfs-3g'
+- *pacman -S ntfs-3g*
 
 noto-fonts-cjk (expanded font support)
-- 'pacman -S noto-fonts-cjk'
+- *pacman -S noto-fonts-cjk*
 
 vlc (media player)
-- 'pacman -S vlc'
+- *pacman -S vlc
 
 Obsidian (markdown notes manager)
-- 'pacman -S obsidian'
+- *pacman -S obsidian)
 
 ## Complete the Installation
 
 When your chroot setup, configurations, and installations are complete, exit the chroot environment
-- 'exit'
+- *exit*
 
 Then, reboot your computer
-- 'reboot'
+- *reboot*
 - remove install media
 
-''Congratulations! At this point, you should have a functional Arch Linux installation!''
+**Congratulations! At this point, you should have a functional Arch Linux installation!**
 - If necessary, stop at your BIOS and set your boot priorities.
 
 # First Boot
@@ -213,15 +213,15 @@ Then, reboot your computer
 Sometimes, not all software is quite oriented on first boot. It's recommended to run a system update, and proceed to 2nd boot
 
 Open kitty
-- 'sudo pacman -Syu'
-- 'reboot'
+- *sudo pacman -Syu*
+- *reboot*
 
 ## 2nd Boot
 
 At this point, you're much more free to navigate as you wish... Here are a few things to consider
 
 Verify that your firewall is working
-- 'sudo ufw status'
+- *sudo ufw status*
 
 Open your web browser, configure, and populate your bookmarked websites
 
@@ -235,7 +235,7 @@ Download your games, and explore other gaming options
 - Lutris (game and launcher compatibility and organization)
 - ProtonDB (website which reports the Linux compatibility state of games)
 
-''Download the config files found in this repository'' (each file has a header with its name, and the path where that file should be stored)
+**Download the config files found in this repository** (each file has a header with its name, and the path where that file should be stored)
 - .bashrc (contains useful terminal shortcuts, terminal safety features)
 - .help.md (as long as the provided .bashrc file is used, you can type 'arch-help' for useful tips when you get stuck)
 - kitty.conf (Makes your terminal look good)
@@ -251,10 +251,10 @@ Visit the 'General Recommendations' Arch Wiki Page
 
 ## Ongoing Maintenance
 
-'sudo pacman -Syu' (or 'arch-update' with the provided .bashrc file)
+*sudo pacman -Syu* (or *arch-update* with the provided .bashrc file)
 - Arch should be updated regularly. Once per week is optimal.
 - Wednesday and Thursday are generally the safest days for avoiding bad package updates, as determined by most development cycles.
-- 'journalctl, dmesg, --verbose' commands, log files, and launching applications from the terminal are useful ways to get troubleshooting insight.
+- *journalctl, dmesg, --verbose* commands, log files, and launching applications from the terminal are useful ways to get troubleshooting insight.
 - To launch an application from the termainal, simply type its name as a command, and execute.
 
 # Further Resources
@@ -311,7 +311,7 @@ Why ufw, btop, fastfetch, and kitty?
 
 Why Plasma and Gnome?
 - Both offer subtle but powerful extra configuration solutions that other graphical environments don't
-- Plasma offers a workflow paradigm that Windows users would find familiar, but is powerful enough to be its own workflow if desired
+- Plasma offers a workflow paradigm that Windows users would find familiar, but is powerful enough to be it's own workflow if desired
 - Gnome offers a focus on effective work flow, and some people benefit from using a paradigm that contrasts from that of Windows
 
 Why Install Extra DEs?
