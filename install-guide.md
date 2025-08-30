@@ -100,7 +100,7 @@ Optional Plasma Software
 
 #### Gnome
 
-Gnome is a highly cohesive desktop environment which is partially alike to Mac OS, and partially unique. It focuses on encouraging effective workflow.
+Gnome is a highly cohesive desktop environment which partially resembles a Mac OS workflow, but also offers many of its own unique philosophies. It focuses on encouraging effective workflow.
 Gnome can be modified with 'extensions' to further customize workflow. Beware that extensions are prone to breakage following Gnome version updates.
 
 - `pacman -S gnome`
