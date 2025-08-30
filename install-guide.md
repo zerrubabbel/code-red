@@ -79,7 +79,7 @@ When the install script finishes, it will ask you if you want to chroot into you
 - `systemctl enable ufw.service`
 
 ### Install your Desktop Environment
-`select either KDE Plasma, Gnome, or both if desired`
+*select either KDE Plasma, Gnome, or both if desired*
 
 KDE Plasma and Gnome are primary choices for easy Arch Linux setups, because installing either one makes many necessary configurations on your behalf.
 You may choose other environments as stand alone options, but this will leave you with extra configurations to navigate on your own.
