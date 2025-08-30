@@ -126,7 +126,7 @@ File Managers
 - Enable gdm if you want cohesion with Gnome.
 
 ### Install Backup Desktop Environments (optional)
-`optional, but recommended to select and install at least one`
+*optional, but recommended to select and install at least one*
 
 #### Cinnamon
 Cinnamon is a relatively lightweight DE, and has a 'Windows 10' familiar feel by default, though is quite customizable.
