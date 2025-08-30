@@ -67,6 +67,7 @@ When the install script finishes, it will ask you if you want to chroot into you
 
 **Optimize pacman mirrors**
 - `cp /etc/pacman.d/mirrorlist.bak /etc/pacman.d/mirrorlist`
+
 (select one of the following commands, or edit syntax as needed)
 - USA: `reflector --verbose --sort rate -l 50 -c 'United States' -p https --save /etc/pacman.d/mirrorlist`
 - Germany: `reflector --verbose --sort rate -l 50 -c 'Germany' -p https --save /etc/pacman.d/mirrorlist`
