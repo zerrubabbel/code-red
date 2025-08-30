@@ -48,19 +48,6 @@ alias "home"="cd ~"
 
 ## == SAFETY ==
 
-alias "sudo rm -rf /"="echo 'To delete your root directory, disable safety lock in ~/.bashrc'"
-alias "sudo rm -rf /*"="echo 'To delete your root directory, disable safety lock in ~/.bashrc'"
-alias "sudo rm -rf /etc/"="echo 'To delete your etc directory, disable safety lock in ~/.bashrc'"
-alias "sudo rm -rf /etc/*"="echo 'To delete your etc directory, disable safety lock in ~/.bashrc'"
-alias "sudo rm -rf /boot/"="echo 'To delete your boot directory, disable safety lock in ~/.bashrc'"
-alias "sudo rm -rf /boot/*"="echo 'To delete your boot directory, disable safety lock in ~/.bashrc'"
-alias "sudo rm -rf /home/"="echo 'To delete your home directory, disable safety lock in ~/.bashrc'"
-alias "sudo rm -rf /home/*"="echo 'To delete your home directory, disable safety lock in ~/.bashrc'"
-alias "sudo rm -rf /usr/"="echo 'To delete your usr directory, disable safety lock in ~/.bashrc'"
-alias "sudo rm -rf /usr/*"="echo 'To delete your usr directory, disable safety lock in ~/.bashrc'"
-alias "sudo rm -rf ~/"="echo 'To delete your home directory, disable safety lock in ~/.bashrc'"
-alias "sudo rm -rf ~/*"="echo 'To delete your home directory, disable safety lock in ~/.bashrc'"
-
 alias "firewall-status"="sudo ufw status"
 alias "firewall-on"="sudo ufw enable"
 alias "firewall-off"="sudo ufw disable"
