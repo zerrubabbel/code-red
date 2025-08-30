@@ -195,7 +195,7 @@ vlc (media player)
 - `pacman -S vlc`
 
 Obsidian (markdown notes manager)
-- `pacman -S obsidian)`
+- `pacman -S obsidian`
 
 ## Complete the Installation
 
