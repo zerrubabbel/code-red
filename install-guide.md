@@ -138,7 +138,7 @@ and future facing. It features an integrated yet togglable tiling window manager
 
 #### xfce
 xfce is a very lightweight DE, but still has high potential for customization with a little work. Choose xfce if you want a simple, grounded, "Windows XP" or earlier feel.
-- *pacman -S sfce4*
+- *pacman -S xfce4*
 
 #### Other options
 
@@ -232,7 +232,6 @@ Configure your Desktop Environment
 
 Download your games, and explore other gaming options
 - Use Protonup-QT to download the latest version of Proton-GE (find 'compatibility' in steam game settings to set preferred proton version)
-- 
 - Lutris (game and launcher compatibility and organization)
 - ProtonDB (website which reports the Linux compatibility state of games)
 
@@ -268,7 +267,64 @@ It's helpful to spend time in Arch communities, or watching Arch channel hosts t
 
 ## The system is now completely yours!
 
-Take care of it, and it will take care of you! Please enjoy Arch Linux
+Take care of it, and it will take care of you! Please enjoy Arch Linux!
 
-# Rationale for initial customizations
+# Rationale for Code-Red configurations
 
+## archinstall rationale
+
+Mirrors as default: Reflector will optimize pacman mirrors after initial installation
+
+Disc configuration as 'Best Effort': It's a simple, low effort, yet suitable for most partition scheme
+
+Disc Encryption: Cold state encryption can keep your data safe, especially on a device as vulnerable and easy to steal as a laptop.
+
+Filesystem as ext4: It's the current gold standard in terms of reliability and compatibility. 'btrfs' however is an excellent alternative that provides
+potential for automatic backup images. ext4 however, saves trouble with FS kernel modules, and post update compatibility issue.
+
+Bootloader as Grub: Common and well supported. Systemdboot is also an excellent bootloader, but the decision to encourage Grub is for parity with the included .bashrc file
+
+Swap enabled on zram: Low effort that saves the need to setup a dedicated swap partition, and tax on hard drive health, but still provides swap benefits
+
+Profile as Xorg: Saves potential install complications, and allows for finer configuration control where it counts
+
+Kernel as linux: Saves potential install complications, and adding a kernel post hoc is relatively easy
+
+NetworkManager enabled: Necessary for compatibility with Plasma or Gnome
+
+Additional Packages (nano and reflector): Small workload on potentially slower mirrors, but sets up for a more streamlined chroot session
+
+Optional repositories (multilib): Extra access to software, better for gaming
+
+Why does Code-Red use the archinstall script?
+- Current software politics create a sense of urgency around alternate OS availability. The classic CLI install is still highly respected and recommended, even if explored in free time, but archinstall provides more immediate accessibility
+
+## chroot rationale
+
+Parallel Downloads: Decreases time needed to complete an update
+
+Why ufw, btop, fastfetch, and kitty?
+- ufw: simple but powerful firewall utility
+- btop: minimal yet powerful system monitor and task manager
+- fastfetch: fast information at a glance, and looks good in the terminal
+- kitty: powerful, modern, and GPU accelerated terminal emulator, easy to configure, synergizes with fastfetch
+
+Why Plasma and Gnome?
+- Both offer subtle but powerful extra configuration solutions that other graphical environments don't
+- Plasma offers a workflow paradigm that Windows users would find familiar, but is powerful enough to be it's own workflow if desired
+- Gnome offers a focus on effective work flow, and some people benefit from using a paradigm that contrasts from that of Windows
+
+Why Install Extra DEs?
+- Redundancy. Bad updates aren't frequent, but they do happen, and a backup can be a real life saver.
+- Exploration. The Linux ecosystem has so much to offer, you may find something you really like, even if it's not obvious.
+
+## Other rationales
+
+Why not include other config files?
+- Some config files may be added, though Code-Red aims to strike a balance between accessible and powerful.
+
+What is the mission of Code-Red
+- To provide a 'sensible decision' configuration guide for new users, particularly gamers, who might not yet have a more full view of the Linux ecosystem (and hence the rationale section)
+
+Will Code-Red become a Linux Distribution?
+- No. There are plenty of Distributions each with their own goals and purposes. Consider the goal of Code-Red to be a streamlined on-ramp for Arch Linux.
