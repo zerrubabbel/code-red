@@ -274,24 +274,24 @@ Take care of it, and it will take care of you! Please enjoy Arch Linux!
 
 ## archinstall rationale
 
-Mirrors as default: Reflector will optimize pacman mirrors after initial installation
+Mirrors as default: Reflector will optimize pacman mirrors after initial installation.
 
-Disc configuration as 'Best Effort': It's a simple, low effort, yet suitable for most partition scheme
+Disc configuration as 'Best Effort': It's a simple, low effort, yet suitable for most partition scheme.
 
 Disc Encryption: Cold state encryption can keep your data safe, especially on a device as vulnerable and easy to steal as a laptop.
 
 Filesystem as ext4: It's the current gold standard in terms of reliability and compatibility. 'btrfs' however is an excellent alternative that provides
-potential for automatic backup images. ext4 however, saves trouble with FS kernel modules, and post update compatibility issue.
+potential for automatic backup images. ext4 however, saves trouble with FS kernel modules, and post update compatibility issues.
 
-Bootloader as Grub: Common and well supported. Systemdboot is also an excellent bootloader, but the decision to encourage Grub is for parity with the included .bashrc file
+Bootloader as Grub: Common and well supported. Systemdboot is also an excellent bootloader, but the decision to encourage Grub is for parity with the included .bashrc file.
 
-Swap enabled on zram: Low effort that saves the need to setup a dedicated swap partition, and tax on hard drive health, but still provides swap benefits
+Swap enabled on zram: Low effort that saves the need to setup a dedicated swap partition, and tax on hard drive health, but still provides swap benefits.
 
-Profile as Xorg: Saves potential install complications, and allows for finer configuration control where it counts
+Profile as Xorg: Saves potential install complications, and allows for finer configuration control where it counts.
 
-Kernel as linux: Saves potential install complications, and adding a kernel post hoc is relatively easy
+Kernel as linux: Saves potential install complications, and adding a kernel post hoc is relatively easy.
 
-NetworkManager enabled: Necessary for compatibility with Plasma or Gnome
+NetworkManager enabled: Necessary for compatibility with Plasma or Gnome.
 
 Additional Packages (nano and reflector): Small workload on potentially slower mirrors, but sets up for a more streamlined chroot session
 
