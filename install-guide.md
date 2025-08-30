@@ -163,7 +163,7 @@ Protonup-QT offers expensions to the gaming compatibility layer 'Proton', includ
 #### yay
 *optional, but recommended*
 
-yay is an Arch User Repository (AUR - community maintained software library) Helper, and can give you easy access to a wider selection of software
+yay is an Arch User Repository Helper (AUR - community maintained software library), and can give you easy access to a wider selection of software
 
 - `sudo pacman -Syu`
 - `sudo pacman -S --needed base-devel git`
