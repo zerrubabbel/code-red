@@ -15,7 +15,8 @@ Code-Red will guide you through the `archisntall` script, but familiarity with t
 
 1. Boot from your Arch Linux Install Media
 2. Verify connection to internet - `ping google.com`
-3. If you need to establish a connection via wifi, use `iwctl`
+- To exit `ping`, press `CTRL + C`
+4. If you need to establish a connection via wifi, use `iwctl`
 - https://wiki.archlinux.org/title/Iwd
 4. Update the pacman database - `pacman -Syy`
 5. Verify your disc and partition scheme - `lsblk`
