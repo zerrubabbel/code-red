@@ -21,7 +21,7 @@ alias "cl"="clear && header"
 
 ## == PACMAN ==
 
-alias "arch-update"="sudo pacman -Syu && echo 'TO UPDATE FLATPAKS, RUN: flatpak update' && echo 'TO UPDATE AUR PACKAGES RUN: yay'"
+alias "arch-update"="echo 'exectuting: sudo pacman -Syu' && sudo pacman -Syu && echo 'TO UPDATE FLATPAKS, RUN: flatpak update' && echo 'TO UPDATE AUR PACKAGES RUN: yay'"
 alias "arch-install"="sudo pacman -S"
 alias "arch-remove"="sudo pacman -Rns"
 alias "remove-orphans"="sudo pacman -Qdtq | sudo pacman -Rns -"
