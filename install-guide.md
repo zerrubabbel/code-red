@@ -1,6 +1,14 @@
 # Official Install Guide
 - https://wiki.archlinux.org/title/Installation_guide
 
+## Contents
+[Getting Started](#getting-started)
+[archinstall Setup](archinstall)
+[chroot Steps](#chroot-steps)
+[Desktop Environments](#install-your-desktop-environment)
+[Post-Install Steps](#first-boot)
+[Rationale](#rationale-for-code-red-configurations)
+
 # Code-Red Install Recommendations
 
 ## Code-Red Assumptions
@@ -9,7 +17,7 @@ Code-Red assumes that you have already created install media, have verified the 
 
 ## Getting Started
 
-Code-Red will guide you through the `archisntall` script, but familiarity with the CLI install as outlined in the official Install Guide is highly encouraged and recommended.
+Code-Red will guide you through the `archinstall` script, but familiarity with the CLI install as outlined in the official Install Guide is highly encouraged and recommended.
 
 ### Initial Steps
 
@@ -20,7 +28,11 @@ Code-Red will guide you through the `archisntall` script, but familiarity with t
 - https://wiki.archlinux.org/title/Iwd
 4. Update the pacman database - `pacman -Syy`
 5. Verify your disc and partition scheme - `lsblk`
-- Navigate this step carefully to avoid accidentally harming other hard drives and their contents
+
+- **Use extreme caution during disk partitioning! Be absolutely sure to select the correct target disk**
+- Potential for selecting the wrong disk is high, and can result in loss of valuable data.
+- It may be advisable to temporarily disconnect disks which are not intended for installation.
+
 6. Adjust if necessary - `fdisk /dev/TARGET-DISC`
 7. Proceed to `archinstall` when ready
 
@@ -43,7 +55,7 @@ Here are the Code-Red recommended configurations, as proceeding down the `archin
 - Profile: Xorg
 - Graphics drivers: 'All open-source' unless using an Nvidia graphics card, in which case select 'Nvidia (proprietary)'
 - Audio: Pipewire
-- Kernels: defualt linux kernel
+- Kernels: default linux kernel
 - Network configuration: NetworkManager enabled
 - Additional packages: nano reflector
 - Optional repositories: enable Multilib
@@ -89,8 +101,9 @@ so starting with either Plasma or Gnome stands to simply cut down on work.
 
 #### KDE Plasma
 
-KDE Plasma is a feature rich, and highly versatile desktop environment that has a Windows-familiar feel by default,
-though it's highly capable of mimicing other familiar environments, or synthesizing a unique workflow.
+KDE Plasma is a feature rich, and highly versatile desktop environment that has a Windows-familiar feel by default.
+It's highly capable of mimicing other familiar environments (like Mac OS or Chrome OS), or creating unique workflows.
+
 Plasma can be prone to quirks or bugs. In the case that these are experienced, It's advisable to have a backup DE on hand.
 
 - `pacman -S plasma`
@@ -157,7 +170,7 @@ Mate, Budgie, LXDE / LXQT, Openbox, AwesomeWM, Window Maker, Hyprland, BSPWM, i3
 
 #### Protonup-QT
 
-Protonup-QT offers expensions to the gaming compatibility layer 'Proton', including Proton-GE, which often offers smoother gaming experiences than Proton alone.
+Protonup-QT offers extensions to the gaming compatibility layer 'Proton', including Proton-GE, which often offers smoother gaming experiences than Proton alone.
 
 - `flatpak install flathub net.davidotek.pupgui2`
 
@@ -233,7 +246,7 @@ Configure your Desktop Environment
 - Arrange your taskbar, dock, or the widgets they contain
 
 Download your games, and explore other gaming options
-- Use Protonup-QT to download the latest version of Proton-GE (find 'compatibility' in steam game settings to set preferred proton version)
+- Use Protonup-QT to download the latest version of Proton-GE (find 'compatibility' in Steam game settings to set preferred proton version)
 - Lutris (game and launcher compatibility and organization)
 - ProtonDB (website which reports the Linux compatibility state of games)
 
@@ -257,7 +270,7 @@ Visit the 'General Recommendations' Arch Wiki Page
 - Arch should be updated regularly. Once per week is optimal.
 - Wednesday and Thursday are generally the safest days for avoiding bad package updates, as determined by most development cycles.
 - `journalctl, dmesg, --verbose` commands, log files, and launching applications from the terminal are useful ways to get troubleshooting insight.
-- To launch an application from the termainal, simply type its name as a command, and execute.
+- To launch an application from the terminal, simply type its name as a command, and execute.
 
 # Further Resources
 
@@ -313,7 +326,7 @@ Why ufw, btop, fastfetch, and kitty?
 
 Why Plasma and Gnome?
 - Both offer subtle but powerful extra configuration solutions that other graphical environments don't
-- Plasma offers a workflow paradigm that Windows users would find familiar, but is powerful enough to be it's own workflow if desired
+- Plasma offers a workflow paradigm that Windows users would find familiar, but is powerful enough to be its own workflow if desired
 - Gnome offers a focus on effective work flow, and some people benefit from using a paradigm that contrasts from that of Windows
 
 Why Install Extra DEs?
