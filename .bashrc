@@ -15,7 +15,7 @@ PS1='[\u@\h \W]\$ '
 
 ## == SYSTEM BASICS ==
 
-alias "arch-help"="cat ~/.help"
+alias "arch-help"="cat ~/.help.md"
 alias "cl"="clear && header"
 #alias "nap"="shutdown +30"
 
