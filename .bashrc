@@ -34,10 +34,12 @@ alias "mirrors"="sudo reflector --verbose --sort rate -l 50 -c 'United States' -
 
 ## File Management
 
+# If you are comfortable with command line permanence, File Management aliases may be commented out by changing 'alias' to '#alias'
+
 alias "cp"="cp -i"
 alias "mv"="mv -i"
 alias "rm"='echo "Are you sure you want to remove files? If so use /bin/rm"'
-alias "rmdir"='echo "Are you sure you want to remove this direcorty? If so use /bin/rmdir"'
+alias "rmdir"='echo "Are you sure you want to remove this directory? If so use /bin/rmdir"'
 alias "c"="clear"
 
 ## Navigation
