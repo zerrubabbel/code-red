@@ -5,13 +5,13 @@
 
 This repository includes a curated install guide, selection of configuration files, and rationale for choices made during installation and setup.
 
-# **Disclaimer:**
+## **Disclaimer:**
 This project is not intended for public or commercial use, and is intended for specific individuals. It is not a polished, public-facing toolkit.
 - Feel free to fork and adapt to your own needs.
 - **Users and Forkers assume all responsibility for risks and damages.**
 - Author (zerrubabbel) assumes no responsibility for risks or damages in any manner expressed or implied.
 
-# File Structure
+## File Structure
 All config files in this repository will contain a header with the following format:
 - FILE-NAME
 - PATH/TO/FILE/LOCATION
@@ -33,7 +33,7 @@ However, I am not actively maintaining community contributions, or offering supp
 
 Licensed under the [MIT License](./LICENSE.md)
 
-# Purpose
+## Purpose
 The goal of this repo is to:
 - Provide a lightweight and beginner-friendly Arch Linux setup.
 - Share opinionated, but documented configuration files.
