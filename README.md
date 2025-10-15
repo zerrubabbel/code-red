@@ -1,4 +1,4 @@
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE.md)
 
 # code-red
 **code-red** is intended to be a simple and friendly starting point for installing and configuring Arch Linux, especially for users who are new to Linux.
