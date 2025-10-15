@@ -2,12 +2,12 @@
 - https://wiki.archlinux.org/title/Installation_guide
 
 ## Contents
-[Getting Started](#getting-started)
-[archinstall Setup](archinstall)
-[chroot Steps](#chroot-steps)
-[Desktop Environments](#install-your-desktop-environment)
-[Post-Install Steps](#first-boot)
-[Rationale](#rationale-for-code-red-configurations)
+- [Getting Started](#getting-started)
+- [archinstall Setup](archinstall)
+- [chroot Steps](#chroot-steps)
+- [Desktop Environments](#install-your-desktop-environment)
+- [Post-Install Steps](#first-boot)
+- [Rationale](#rationale-for-code-red-configurations)
 
 # Code-Red Install Recommendations
 
