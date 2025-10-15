@@ -37,8 +37,8 @@ Licensed under the [MIT License](./LICENSE.md)
 The goal of this repo is to:
 - Provide a lightweight and beginner-friendly Arch Linux setup.
 - Share opinionated, but documented configuration files.
-- Keep thing simple and easy to understand.
+- Keep things simple and easy to understand.
 
 This repository is probably **not** for you if you're already comfortable with Linux, or if you have no interest in Linux.
-This repository **is** for you if you know zerrubabel personally, and were directed to code-red.
+This repository **is** for you if you know zerrubabbel personally, and were directed to code-red.
 This repository **might** be helpful to you, if you're looking for a beginner-friendly entry point to Arch Linux.
