@@ -20,7 +20,8 @@ Example
 
 ```bash
 $EDITOR ~/.config/kitty/kitty.conf
-
+```
+```
 kitty.conf
 ~/.config/kitty/kitty.conf
 ```
