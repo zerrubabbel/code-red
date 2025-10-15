@@ -8,8 +8,7 @@ This repository includes a curated install guide, selection of configuration fil
 ## **Disclaimer:**
 This project is not intended for public or commercial use, and is intended for specific individuals. It is not a polished, public-facing toolkit.
 - Feel free to fork and adapt to your own needs.
-- **Users and Forkers assume all responsibility for risks and damages.**
-- Author (zerrubabbel) assumes no responsibility for risks or damages in any manner expressed or implied.
+- **Author (zerrubabbel) assumes no responsibility for risks or damages in any manner expressed or implied.**
 
 ## File Structure
 All config files in this repository will contain a header with the following format:
@@ -25,7 +24,6 @@ $EDITOR ~/.config/kitty/kitty.conf
 kitty.conf
 ~/.config/kitty/kitty.conf
 ```
-
 
 # Licensing
 You are free to fork and modify this project for personal use.
