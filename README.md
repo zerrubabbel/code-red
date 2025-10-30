@@ -40,3 +40,11 @@ The goal of this repo is to:
 This repository is probably **not** for you if you're already comfortable with Linux, or if you have no interest in Linux.
 This repository **is** for you if you know zerrubabbel personally, and were directed to code-red.
 This repository **might** be helpful to you, if you're looking for a beginner-friendly entry point to Arch Linux.
+
+# Getting Started
+Be sure to first read:
+- install-guide.md
+- ~/help.md
+- ~/.bashrc
+
+Having a heads up about what to expect can go a long way toward securing success. Once read and understood, flash your Arch Linux ISO to a usb drive, and begin the installation process with install-guide.md.
