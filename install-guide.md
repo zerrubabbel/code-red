@@ -89,7 +89,6 @@ When the install script finishes, it will ask you if you want to chroot into you
 
 **Install and set up Code-Red Packages**
 - `pacman -S ufw btop fastfetch kitty`
-- `systemctl enable ufw.service`
 
 ### Install your Desktop Environment
 *select either KDE Plasma, Gnome. Or select both if desired*
@@ -229,6 +228,7 @@ Sometimes, not all software is quite oriented on first boot. It's recommended to
 
 Open kitty
 - `sudo pacman -Syu`
+- `sudo ufw enable`
 - `reboot`
 
 ## 2nd Boot
@@ -338,7 +338,7 @@ Why Install Extra DEs?
 Why not include other config files?
 - Some config files may be added, though Code-Red aims to strike a balance between accessible and powerful.
 
-What is the mission of Code-Red
+What is the mission of Code-Red?
 - To provide a 'sensible decision' configuration guide for new users, particularly gamers, who might not yet have a more full view of the Linux ecosystem (and hence the rationale section)
 
 Will Code-Red become a Linux Distribution?
